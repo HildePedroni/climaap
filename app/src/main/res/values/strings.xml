@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PrevisaoTempo</string>
+    <string name="app_name">Clima app</string>
     <string name="title_activity_previsao_tempo_londres">PrevisaoTempoLondres</string>
     <string name="title_activity_teste">teste</string>
     <string name="facebook_app_id">198086680712264</string>
@@ -13,4 +13,5 @@
     <string name="umidade">Umidade</string>
     <string name="vinte_porcento_teste">20%</string>
     <string name="carregando">Carregando…</string>
+    <string name="clima_app">Clima App</string>
 </resources>

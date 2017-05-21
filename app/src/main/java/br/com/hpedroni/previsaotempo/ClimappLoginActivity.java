@@ -2,6 +2,7 @@ package br.com.hpedroni.previsaotempo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -40,7 +41,7 @@ public class ClimappLoginActivity extends AppCompatActivity implements IClimappL
         presenter = new ClimappLoginPresenter(this);
         txtDireciona = (TextView) findViewById(R.id.txt_redireciona);
         loginButton = (LoginButton) findViewById(R.id.login_button);
-
+        ViewCompat.setElevation(loginButton, 8);
         Intent intent = getIntent();
         if (intent.hasExtra("logout")) {
             //Finaliza o aplicativo pois o usuario deu logout.
