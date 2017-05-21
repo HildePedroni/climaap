@@ -10,6 +10,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
@@ -17,15 +18,20 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name="br.com.hpedroni.previsaotempo.ClimappSplashSreenActivity">
+        <activity
+            android:name="br.com.hpedroni.previsaotempo.ClimappSplashSreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="br.com.hpedroni.previsaotempo.ClimappContainerActivity" />
-        <activity android:name="br.com.hpedroni.previsaotempo.ClimappLoginActivity"/>
+        <activity
+            android:name="br.com.hpedroni.previsaotempo.ClimappContainerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="br.com.hpedroni.previsaotempo.ClimappLoginActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
