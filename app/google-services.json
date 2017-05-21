@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "437321158082",
+    "firebase_url": "https://previsaotempo-d4366.firebaseio.com",
+    "project_id": "previsaotempo-d4366",
+    "storage_bucket": "previsaotempo-d4366.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437321158082:android:b62dbc0df56b9818",
+        "android_client_info": {
+          "package_name": "br.com.hpedroni.previsaotempo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437321158082-0e0tf4mndsbt5hphg8vk2fesdvqfihfe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.hpedroni.previsaotempo",
+            "certificate_hash": "a965bec8f807a79abf05a178b1767e058e987c10"
+          }
+        },
+        {
+          "client_id": "437321158082-pfnnsjuk5g5s1gh2pneoihrasvc2jopd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnAT4PVmikqOBrf3t7zdvZz2t-AiNV7pg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437321158082-pfnnsjuk5g5s1gh2pneoihrasvc2jopd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PrevisaoTempo</string>
+    <string name="title_activity_previsao_tempo_londres">PrevisaoTempoLondres</string>
+    <string name="title_activity_teste">teste</string>
+    <string name="facebook_app_id">198086680712264</string>
+    <string name="action_logout">logout</string>
+    <string name="background">background</string>
+    <string name="redirecionando">Redirecionando…</string>
+    <string name="seu_clima_local">Seu clima local…</string>
+    <string name="e_de_londres">… e de Londres.</string>
+    <string name="cidade">Cidade</string>
+    <string name="graus_teste">30</string>
+    <string name="umidade">Umidade</string>
+    <string name="vinte_porcento_teste">20%</string>
+    <string name="carregando">Carregando…</string>
+</resources>
