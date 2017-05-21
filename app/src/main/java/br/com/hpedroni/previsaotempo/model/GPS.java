@@ -1,7 +1,6 @@
-package br.com.hpedroni.climapp.model;
+package br.com.hpedroni.previsaotempo.model;
 
 import android.content.Context;
-import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;

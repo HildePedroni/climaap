@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp.model;
+package br.com.hpedroni.previsaotempo.model;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

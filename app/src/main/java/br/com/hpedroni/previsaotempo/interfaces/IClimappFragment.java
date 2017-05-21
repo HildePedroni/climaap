@@ -1,8 +1,8 @@
-package br.com.hpedroni.climapp.interfaces;
+package br.com.hpedroni.previsaotempo.interfaces;
 
 import android.content.Context;
 
-import br.com.hpedroni.climapp.model.InfoClima;
+import br.com.hpedroni.previsaotempo.model.InfoClima;
 
 /**
  * Created by Hilde on 20/05/17.

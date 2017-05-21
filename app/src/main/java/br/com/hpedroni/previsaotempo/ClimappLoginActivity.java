@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp;
+package br.com.hpedroni.previsaotempo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-import br.com.hpedroni.climapp.interfaces.IClimappLogin;
+import br.com.hpedroni.previsaotempo.interfaces.IClimappLogin;
 
 public class ClimappLoginActivity extends AppCompatActivity implements IClimappLogin.view {
 

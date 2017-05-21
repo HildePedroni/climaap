@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.hpedroni.climapp">
+    package="br.com.hpedroni.previsaotempo">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -17,15 +17,15 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name="br.com.hpedroni.climapp.ClimappSplashSreenActivity">
+        <activity android:name="br.com.hpedroni.previsaotempo.ClimappSplashSreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="br.com.hpedroni.climapp.ClimappContainerActivity" />
-        <activity android:name="br.com.hpedroni.climapp.ClimappLoginActivity"/>
+        <activity android:name="br.com.hpedroni.previsaotempo.ClimappContainerActivity" />
+        <activity android:name="br.com.hpedroni.previsaotempo.ClimappLoginActivity"/>
     </application>
 
 </manifest>

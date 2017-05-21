@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp;
+package br.com.hpedroni.previsaotempo;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp.model;
+package br.com.hpedroni.previsaotempo.model;
 
 import org.json.JSONException;
 import org.json.JSONObject;

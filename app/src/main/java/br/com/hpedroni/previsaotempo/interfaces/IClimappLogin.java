@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp.interfaces;
+package br.com.hpedroni.previsaotempo.interfaces;
 
 import android.content.Context;
 

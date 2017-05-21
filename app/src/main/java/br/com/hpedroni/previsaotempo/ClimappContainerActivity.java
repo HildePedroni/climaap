@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp;
+package br.com.hpedroni.previsaotempo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.hpedroni.climapp.Fragments.ClimappFragment;
+import br.com.hpedroni.previsaotempo.Fragments.ClimappFragment;
 
 /*
     Classe container

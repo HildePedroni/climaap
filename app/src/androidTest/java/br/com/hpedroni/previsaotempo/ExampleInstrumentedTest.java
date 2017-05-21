@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp;
+package br.com.hpedroni.previsaotempo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

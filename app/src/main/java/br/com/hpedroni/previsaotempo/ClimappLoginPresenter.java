@@ -1,9 +1,8 @@
-package br.com.hpedroni.climapp;
+package br.com.hpedroni.previsaotempo;
 
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
-
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.login.LoginManager;
@@ -15,8 +14,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import br.com.hpedroni.climapp.interfaces.IClimappLogin;
+import br.com.hpedroni.previsaotempo.interfaces.IClimappLogin;
 
 /**
  * Created by Hilde on 20/05/17.
@@ -26,12 +24,10 @@ import br.com.hpedroni.climapp.interfaces.IClimappLogin;
 
 class ClimappLoginPresenter implements IClimappLogin.presenter {
 
-
     private IClimappLogin.view view;
     private FirebaseAuth mAuth;
     private CallbackManager callbackManager;
     private FirebaseAuth.AuthStateListener mAuthListener;
-
 
     ClimappLoginPresenter(IClimappLogin.view view) {
         this.view = view;
@@ -53,7 +49,6 @@ class ClimappLoginPresenter implements IClimappLogin.presenter {
     public void configure() {
         mAuth = FirebaseAuth.getInstance();
         callbackManager = CallbackManager.Factory.create();
-
         mAuthListener = new FirebaseAuth.AuthStateListener() {
 
             @Override
@@ -65,7 +60,6 @@ class ClimappLoginPresenter implements IClimappLogin.presenter {
             }
         };
     }
-
 
     public void handleFacebookAccessToken(LoginResult loginResult, Context context) {
         AccessToken token = loginResult.getAccessToken();
@@ -94,6 +88,5 @@ class ClimappLoginPresenter implements IClimappLogin.presenter {
         LoginManager.getInstance().logOut();
         view.finaliza();
     }
-
 
 }

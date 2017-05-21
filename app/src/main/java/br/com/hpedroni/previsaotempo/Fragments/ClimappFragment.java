@@ -1,4 +1,4 @@
-package br.com.hpedroni.climapp.Fragments;
+package br.com.hpedroni.previsaotempo.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,10 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import br.com.hpedroni.climapp.ClimappFragmentsPresenter;
-import br.com.hpedroni.climapp.R;
-import br.com.hpedroni.climapp.interfaces.IClimappFragment;
-import br.com.hpedroni.climapp.model.InfoClima;
+import br.com.hpedroni.previsaotempo.ClimappFragmentsPresenter;
+import br.com.hpedroni.previsaotempo.R;
+import br.com.hpedroni.previsaotempo.interfaces.IClimappFragment;
+import br.com.hpedroni.previsaotempo.model.InfoClima;
 
 /**
  * Created by Hilde on 20/05/17.

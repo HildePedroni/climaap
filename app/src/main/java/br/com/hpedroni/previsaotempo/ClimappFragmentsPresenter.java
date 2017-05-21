@@ -1,14 +1,14 @@
-package br.com.hpedroni.climapp;
+package br.com.hpedroni.previsaotempo;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
 import org.json.JSONException;
 
-import br.com.hpedroni.climapp.model.WebClient;
-import br.com.hpedroni.climapp.interfaces.IClimappFragment;
-import br.com.hpedroni.climapp.model.GPS;
-import br.com.hpedroni.climapp.model.InfoClima;
+import br.com.hpedroni.previsaotempo.model.WebClient;
+import br.com.hpedroni.previsaotempo.interfaces.IClimappFragment;
+import br.com.hpedroni.previsaotempo.model.GPS;
+import br.com.hpedroni.previsaotempo.model.InfoClima;
 
 /**
  * Created by Hilde on 20/05/17.
