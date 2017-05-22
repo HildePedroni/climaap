@@ -1,6 +1,7 @@
 package br.com.hpedroni.previsaotempo;
 
 import android.content.Context;
+import android.location.Location;
 import android.os.AsyncTask;
 
 import org.json.JSONException;
@@ -21,6 +22,8 @@ public class ClimappFragmentsPresenter implements IClimappFragment.presenter {
     private static String MY_API_KEY = "f4806144307a4ec421d39c761ffd59a0";
     private static String LONDON_URL = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=" + MY_API_KEY;
 
+    private static String DEFAULT_URL = "http://api.openweathermap.org/data/2.5/weather?q=brasilia,uk&appid=" + MY_API_KEY;
+
 
     private IClimappFragment.view view;
 
@@ -34,9 +37,13 @@ public class ClimappFragmentsPresenter implements IClimappFragment.presenter {
     public void getWeather(String local, Context context) {
         if(local.equals("Local")) {
             GPS gps = new GPS(context);
-            double latitude = gps.getLatitude();
-            double longitude = gps.getLongitude();
-            String url = URL_OPEN_WEATHER + "lat=" + latitude + "&lon=" + longitude + "&appid=" + MY_API_KEY;
+            Location location = gps.getLocation();
+            String url = DEFAULT_URL;
+            if(location != null){
+                url = URL_OPEN_WEATHER + "lat=" + location.getLatitude() + "&lon=" + location.getLongitude() + "&appid=" + MY_API_KEY;
+            }else{
+                view.showToast("Falha ao encontrar localização, cidade padrão carregada!");
+            }
             buscaDadosWebService(url);
         }else{
             String url = LONDON_URL;

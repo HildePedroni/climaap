@@ -18,6 +18,8 @@ public interface IClimappFragment {
         void showToast(String msg);
 
         void hideLoading();
+
+
     }
 
     interface presenter {

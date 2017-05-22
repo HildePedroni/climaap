@@ -1,5 +1,6 @@
 package br.com.hpedroni.previsaotempo.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,14 +18,12 @@ import br.com.hpedroni.previsaotempo.model.InfoClima;
 
 /**
  * Created by Hilde on 20/05/17.
- *
+ * <p>
  * Optei por utilizar fragments para aproveitar tanto o layout como o código que é exatamente o mesmo
  * nas duas telas.
- *
- *
  */
 
-public class ClimappFragment extends Fragment implements IClimappFragment.view{
+public class ClimappFragment extends Fragment implements IClimappFragment.view {
 
 
     private IClimappFragment.presenter presenter;
@@ -46,7 +45,8 @@ public class ClimappFragment extends Fragment implements IClimappFragment.view{
         return frag;
     }
 
-    public ClimappFragment() {}
+    public ClimappFragment() {
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,10 +68,16 @@ public class ClimappFragment extends Fragment implements IClimappFragment.view{
         containerUmidade = (LinearLayout) rootView.findViewById(R.id.container_umidade);
         txtLoading = (TextView) rootView.findViewById(R.id.txt_loading);
 
-        //Busca os dados no server
-        presenter.getWeather(this.local, this.getContext());
+
 
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //Busca os dados no server
+        presenter.getWeather(this.local, this.getContext());
     }
 
     @Override
@@ -89,6 +95,7 @@ public class ClimappFragment extends Fragment implements IClimappFragment.view{
         containerUmidade.setVisibility(View.VISIBLE);
         txtLoading.setVisibility(View.INVISIBLE);
     }
+
 
     @Override
     public void showData(InfoClima infoClima) {
