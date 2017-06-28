@@ -1,22 +1,32 @@
 package br.com.hpedroni.previsaotempo.model;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 /**
  * Created by Hilde on 20/05/17.
- *
+ * <p>
  * Classe responsável pelo acesso ao webservice.
  * foi implementada como um singleton para facilitar o acesso.
  */
 
 public class WebClient {
 
+    private static final String TAG = WebClient.class.getSimpleName();
     private static WebClient instance;
+    private OkHttpClient client;
+
 
     public static WebClient getInstance() {
         if (instance == null) {
@@ -27,43 +37,25 @@ public class WebClient {
 
     //Evita que a classe seja acessada fora do getInstance
     private WebClient() {
+        client = new OkHttpClient();
     }
 
     public String getForecastData(String mUrl) {
-        HttpURLConnection conn = null;
+
+        Request request = new Request.Builder()
+                .url(mUrl)
+                .build();
+
+        Response response = null;
         try {
-            URL url = new URL(mUrl);
-            conn = (HttpURLConnection) url.openConnection();
-            conn.setReadTimeout(15000);
-            conn.setConnectTimeout(15000);
-            conn.setRequestMethod("GET");
-
-            int responseCode = conn.getResponseCode();
-            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String inputLine;
-
-            StringBuilder response = new StringBuilder();
-            if (responseCode == HttpsURLConnection.HTTP_OK) {
-                while ((inputLine = in.readLine()) != null) {
-                    response.append(inputLine);
-                }
-                in.close();
-                return response.toString();
-            } else {
-                return null;
-            }
-        } catch (Exception e) {
+            response = this.client.newCall(request).execute();
+            return response.body().string();
+        } catch (IOException e) {
             e.printStackTrace();
             return null;
-        } finally {
-            if (conn != null) {
-                conn.disconnect();
-            }
-
         }
+
     }
-
-
 
 
 }
